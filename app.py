@@ -20,5 +20,9 @@ def convert_word_to_pdf():
 
     return render_template("index.html")
 
-if __name__ == "__main__":
-    app.run(debug=True)
+if __name__ == '__main__':
+    # Use Gunicorn as the web server
+    import os
+    host = '0.0.0.0'
+    port = int(os.environ.get('PORT', 8000))  # Use the PORT environment variable provided by Render
+    app.run(debug=False, host=host, port=port)
