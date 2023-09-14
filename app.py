@@ -23,7 +23,7 @@ def index():
 
 def convert_from_docx(docx_contents):
     # Create a temporary file to hold the DOCX data
-    temp_docx_path = "temp.docx"
+    temp_docx_path = "temp/temp.docx"
     with open(temp_docx_path, "wb") as temp_docx_file:
         temp_docx_file.write(docx_contents)
 
@@ -32,12 +32,12 @@ def convert_from_docx(docx_contents):
 
     # Read the converted PDF data
     pdf_contents = None
-    with open("temp.pdf", "rb") as pdf_file:
+    with open("temp/temp.pdf", "rb") as pdf_file:
         pdf_contents = pdf_file.read()
 
     # Clean up temporary files
     os.remove(temp_docx_path)
-    os.remove("temp.pdf")
+    os.remove("temp/temp.pdf")
 
     return pdf_contents
 
