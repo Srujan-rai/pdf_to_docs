@@ -1,5 +1,6 @@
 import subprocess
 from flask import Flask, render_template, request, send_file
+import io
 
 app = Flask(__name__)
 
@@ -38,11 +39,15 @@ def send_pdf(pdf_contents):
         return send_file(
             io.BytesIO(pdf_contents),
             as_attachment=True,
-            download_name="converted.pdf",
+            download_name="converted_pdf.pdf",
             mimetype="application/pdf",
         )
     else:
         return "Conversion failed."
 
-if __name__ == "__main__":
-    app.run(debug=True)
+if __name__ == '__main__':
+    # Use Gunicorn as the web server
+    import os
+    host = '0.0.0.0'
+    port = int(os.environ.get('PORT', 8000))  # Use the PORT environment variable provided by Render
+    app.run(debug=True, host=host, port=port)
