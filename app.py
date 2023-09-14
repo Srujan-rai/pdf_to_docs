@@ -49,7 +49,7 @@ def send_pdf(pdf_contents):
     return send_file(
         pdf_file,
         as_attachment=True,
-        download_name="rudra.pdf",
+        download_name="converted_pdf.pdf",
         mimetype="application/pdf",
     )
 
