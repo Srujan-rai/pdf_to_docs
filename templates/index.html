@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Word to PDF Converter</title>
+</head>
+<body>
+    <h1>Convert Word to PDF</h1>
+    <form method="POST" enctype="multipart/form-data">
+        <input type="file" name="word_file" accept=".docx">
+        <input type="submit" value="Convert">
+    </form>
+    {% if download_link %}
+        <p><a href="{{ download_link }}">Download PDF</a></p>
+    {% endif %}
+</body>
+</html>
