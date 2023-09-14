@@ -32,8 +32,7 @@ def convert_from_docx(docx_contents):
     stdout, stderr = process.communicate(input=docx_contents)
 
     if process.returncode == 0:
-        # Decode stdout from bytes to a string and then encode it back to bytes
-        return stdout.decode("utf-8").encode("utf-8")
+        return stdout.encode("utf-8")
     else:
         print("Conversion failed. Error:", stderr)
         return None
@@ -50,8 +49,4 @@ def send_pdf(pdf_contents):
         return "Conversion failed."
 
 if __name__ == '__main__':
-    # Use Gunicorn as the web server
-    import os
-    host = '0.0.0.0'
-    port = int(os.environ.get('PORT', 8000))  # Use the PORT environment variable provided by Render
-    app.run(debug=True, host=host, port=port)
+    app.run(debug=True)

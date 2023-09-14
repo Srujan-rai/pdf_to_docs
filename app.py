@@ -1,7 +1,6 @@
 from flask import Flask, render_template, request, redirect, url_for, send_file
 from docx2pdf import convert
 import io
-import os
 
 app = Flask(__name__)
 
@@ -10,13 +9,13 @@ def index():
     if request.method == "POST":
         uploaded_file = request.files["doc_file"]
         if uploaded_file.filename != "":
-            # Read the DOCX file into memory
+
             docx_contents = uploaded_file.read()
 
-            # Perform the conversion from DOCX to PDF in-memory
+
             pdf_contents = convert_from_docx(docx_contents)
 
-            # Provide a download link for the PDF
+
             return send_pdf(pdf_contents)
 
     return render_template("index.html")
