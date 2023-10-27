@@ -2,12 +2,48 @@
 <html>
 <head>
     <title>PDF to DOCX Converter</title>
+    <style>
+        body {
+            background-image: url('bc2.jpg');
+            background-size: cover;
+            background-position: center;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            background-color: rgba(255, 255, 255, 0.1); /* Background color with opacity */
+            border-radius: 10px;
+            padding: 20px;
+            margin: 100px auto; /* Center the container vertically */
+            max-width: 400px;
+        }
+        .main{
+            background-color: rgba(255, 255, 255, 0.1); /* Background color with opacity */
+            border-radius: 10px;
+            padding: 20px;
+            margin: 100px auto; /* Center the container vertically */
+            max-width: 400px;
+        }
+        h1 {
+            color: #ffff;
+        }
+        form {
+            text-align: left; /* Align form elements to the left */
+        }
+    </style>
 </head>
 <body>
-    <h1>PDF to DOCX Converter</h1>
-    <form action="/convert" method="post" enctype="multipart/form-data">
-        <input type="file" name="pdf_file" accept=".pdf" required>
-        <button type="submit">Convert</button>
-    </form>
+    <div class="container">
+        <h1>PDF to DOCX Converter</h1>
+        <div class="main">
+        <form action="/convert" method="post" enctype="multipart/form-data">
+            <input type="file" name="pdf_file" accept=".pdf" required>
+            <br><br>
+            <button type="submit">Convert</button>
+        </form>
+        </div>
+    </div>
 </body>
 </html>
