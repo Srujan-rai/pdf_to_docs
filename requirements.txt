@@ -1,5 +1,1 @@
-Flask
-docx2pdf
-unoconv
-
-
+pdf2docx==0.3.2
