@@ -28,7 +28,7 @@ class MyHandler(SimpleHTTPRequestHandler):
             shutil.copyfileobj(docx_file, self.wfile)
 
 if __name__ == '__main__':
-    port = 0
+    port =9500
     Handler = MyHandler
 
     with socketserver.TCPServer(("", port), Handler) as httpd:
