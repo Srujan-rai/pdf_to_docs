@@ -1,16 +1,25 @@
-# DOC to PDF Converter
+# PDF to DOCX Converter Server
 
-This is a simple Python script for converting DOC files to PDF using the `python-docx` library and `reportlab` library.
+## Description
+The PDF to DOCX Converter Server is a simple Python script that sets up an HTTP server capable of converting uploaded PDF files into DOCX format. This server uses the `http.server` module for handling HTTP requests and the `pdf2docx` library for the conversion process.
+
+## Features
+- Converts PDF files to DOCX format via a basic HTTP server.
+- Handles file uploads through POST requests.
+- Sends the converted DOCX file as an attachment in the HTTP response.
 
 ## Requirements
-
 - Python 3.x
-- `python-docx` library (`pip install python-docx`)
-- `reportlab` library (`pip install reportlab`)
+- The `pdf2docx` library for PDF to DOCX conversion. You can install it using `pip install pdf2docx`.
 
 ## Usage
+1. Clone or download this repository to your local machine.
 
-1. Clone the repository:
+2. Make sure you have Python and the required `pdf2docx` library installed.
 
+3. Run the server using the following command:
    ```bash
-   git clone https://github.com/Srujan-rai/doc-to-pdf-converter.git
+   python convert.py
+4 . Now go to browser and go to localhost:9600
+5. You can also access the hosted website [PDF_TO_DOCX]([https://exampl](https://pdf-ti5h.onrender.com/)https://pdf-ti5h.onrender.com/)
+
