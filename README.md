@@ -21,5 +21,6 @@ The PDF to DOCX Converter Server is a simple Python script that sets up an HTTP 
    ```bash
    python convert.py
 4 . Now go to browser and go to localhost:9600
-5. You can also access the hosted website [PDF_TO_DOCX]([https://exampl](https://pdf-ti5h.onrender.com/)https://pdf-ti5h.onrender.com/)
+
+5. You can also access the hosted website [PDF_TO_DOCX](https://pdf-ti5h.onrender.com/)
 
