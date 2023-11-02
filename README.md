@@ -1,7 +1,7 @@
 # PDF to DOCX Converter Server
 
 ## Description
-The PDF to DOCX Converter Server is a simple Python script that sets up an HTTP server capable of converting uploaded PDF files into DOCX format. This server uses the `http.server` module for handling HTTP requests and the `pdf2docx` library for the conversion process.
+The PDF to DOCX Converter Server is a simple Python script that sets up an HTTP server capable of converting uploaded PDF files into DOCX format. This server uses the `http.server` module for handling HTTP requests and the `pdf2docx` library for the conversion process.which acn be accessed using an website.
 
 ## Features
 - Converts PDF files to DOCX format via a basic HTTP server.
